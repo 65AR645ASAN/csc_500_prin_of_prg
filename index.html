@@ -5,40 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mermaid Diagrams</title>
     <!-- Include Mermaid library -->
-    <script type="module">
-      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.2.3/dist/mermaid.esm.min.mjs';
-      mermaid.initialize({ startOnLoad: true });
+    <script src="https://unpkg.com/mermaid@8.13.10/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            mermaid.initialize({ startOnLoad: true });
+        });
     </script>
 </head>
 <body>
-    <h1>Short-Circuiting in Python</h1>
-
-    <h2>Introduction</h2>
-    <p>
-        Short-circuiting is a programming concept that occurs with logical operators in compound conditional expressions.
-        In Python, the logical operators <code>and</code> and <code>or</code> exhibit short-circuit behavior.
-        This means that the evaluation of the expression stops as soon as the result is determined, potentially avoiding unnecessary computation.
-    </p>
-
-    <h2>Flowchart</h2>
-    <h3>`and` Short-Circuiting</h3>
+    <h1>Mermaid Test</h1>
     <div class="mermaid">
-        graph TD
-        A1[Start] --> B1{condition1}
-        B1 --|False|--> E1[Do nothing (short-circuit)]
-        B1 --|True|--> C1{condition2}
-        C1 --|True|--> D1[Do something]
-        C1 --|False|--> E1[Do nothing]
-    </div>
-
-    <h3>`or` Short-Circuiting</h3>
-    <div class="mermaid">
-        graph TD
-        A2[Start] --> B2{condition1}
-        B2 --|True|--> D2[Do something (short-circuit)]
-        B2 --|False|--> C2{condition2}
-        C2 --|True|--> D2[Do something]
-        C2 --|False|--> E2[Do nothing]
+        graph TD;
+        A[Start] --> B{Is it working?};
+        B -- Yes --> C[Great!];
+        B -- No --> D[Check the code];
     </div>
 </body>
 </html>

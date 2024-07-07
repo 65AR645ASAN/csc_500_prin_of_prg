@@ -1,6 +1,3 @@
-
-### `MODULE2/short_circuiting.py`
-
 def short_circuit_and(condition1, condition2):
     """
     Demonstrates short-circuiting with the 'and' operator.
