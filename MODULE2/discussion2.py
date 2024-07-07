@@ -1,7 +1,5 @@
 
-### Python Code
-
-### Create a Python script named `short_circuiting.py` with the following content:
+### `MODULE2/short_circuiting.py`
 
 def short_circuit_and(condition1, condition2):
     """
