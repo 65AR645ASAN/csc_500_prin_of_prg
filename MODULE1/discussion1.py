@@ -12,7 +12,7 @@ def gather_ingredients():
         'eggs': '2',
         'baking_powder': '1 tsp',
         'vanilla_extract': '1 tsp',
-        'chocolate_chips': '1 cup (optional)'
+        'chocolate_chips': '1 cup'
     }
     return ingredients
 

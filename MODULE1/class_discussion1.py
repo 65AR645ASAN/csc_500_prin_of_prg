@@ -10,7 +10,7 @@ class CookieBaking:
             'eggs': '2',
             'baking_powder': '1 tsp',
             'vanilla_extract': '1 tsp',
-            'chocolate_chips': '1 cup (optional)'
+            'chocolate_chips': '1 cup'
         }
 
     def preheat_oven(self, temp=350):
