@@ -1,4 +1,10 @@
 def gather_ingredients():
+    """
+    Gather all the ingredients needed for baking cookies.
+    
+    Returns:
+        dict: A dictionary containing the ingredients and their quantities.
+    """
     ingredients = {
         'flour': '2 cups',
         'sugar': '1 cup',
@@ -11,9 +17,24 @@ def gather_ingredients():
     return ingredients
 
 def preheat_oven(temp=350):
+    """
+    Preheat the oven to a specified temperature.
+    
+    Args:
+        temp (int, optional): The temperature to preheat the oven to. Defaults to 350°F.
+    """
     print(f"Preheating the oven to {temp}°F...")
 
 def prepare_dough(ingredients):
+    """
+    Prepare the cookie dough by mixing the ingredients in the correct order.
+    
+    Args:
+        ingredients (dict): A dictionary containing the ingredients and their quantities.
+    
+    Returns:
+        list: A list representing the mixed dough.
+    """
     # Step 1: Mix dry ingredients
     dry_ingredients = [ingredients['flour'], ingredients['baking_powder']]
     print("Mixing dry ingredients:", dry_ingredients)
@@ -38,16 +59,35 @@ def prepare_dough(ingredients):
     return dough
 
 def form_cookies(dough):
+    """
+    Form the cookie dough into individual cookies on a baking sheet.
+    
+    Args:
+        dough (list): The mixed dough ready to be formed into cookies.
+    """
     print("Forming cookies on the baking sheet...")
 
 def bake_cookies(time=10):
+    """
+    Bake the cookies in the oven for a specified amount of time.
+    
+    Args:
+        time (int, optional): The baking time in minutes. Defaults to 10 minutes.
+    """
     print(f"Baking cookies for {time} minutes...")
 
 def cool_and_serve():
+    """
+    Cool the cookies on the baking sheet and then transfer them to wire racks to cool completely.
+    """
     print("Cooling cookies on the baking sheet...")
     print("Transferring to wire racks to cool completely...")
 
 def bake_cookies_algorithm():
+    """
+    The main algorithm for baking cookies, which includes gathering ingredients,
+    preheating the oven, preparing the dough, forming cookies, baking, and cooling.
+    """
     # Step 1: Gather ingredients
     ingredients = gather_ingredients()
     print("Ingredients gathered:", ingredients)
