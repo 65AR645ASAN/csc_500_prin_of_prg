@@ -8,7 +8,6 @@ Short-circuiting is a programming concept that occurs with logical operators in 
 
 ### `and` Short-Circuiting
 
-```mermaid
 graph TD
     A1[Start] --> B1{condition1}
     B1 --|False|--> E1[Do nothing (short-circuit)]
