@@ -10,8 +10,8 @@ Short-circuiting is a programming concept that occurs with logical operators in 
 
 ```mermaid
 graph TD
-    A[Start] --> B{condition1}
-    B -- False --> E[Do nothing (short-circuit)]
-    B -- True --> C{condition2}
-    C -- True --> D[Do something]
-    C -- False --> E[Do nothing]
+    A1[Start] --> B1{condition1}
+    B1 --|False|--> E1[Do nothing (short-circuit)]
+    B1 --|True|--> C1{condition2}
+    C1 --|True|--> D1[Do something]
+    C1 --|False|--> E1[Do nothing]
