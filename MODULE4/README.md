@@ -1,4 +1,4 @@
-## Flowchart for Short-Circuiting `and` Operator
+# Flowchart for Short-Circuiting `and` Operator
 
 ```mermaid
 graph TD
