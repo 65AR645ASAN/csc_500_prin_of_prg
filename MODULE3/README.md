@@ -1,15 +1,15 @@
-
-## Simple Conditional Test
+## Flowchart for Managing Student Grades
 
 ```mermaid
 graph TD
-    A1[Start] --> B1{condition1}
-    B1 -- No --> E1[Short-circuit]
-    B1 -- Yes --> C1{condition2}
-    C1 -- Yes --> D1{condition3}
-    C1 -- No --> E1[Short-circuit]
-    D1 -- Yes --> F1[Do something else]
-    D1 -- No --> G1[Stop]
-    F1 --> H1{condition4}
-    H1 -- Yes --> I1[End]
-    H1 -- No --> J1[Reevaluate]
+    A1[Start] --> B1[Initialize StudentGrades class with student_grades array]
+    B1 --> C1[Call calculate_average]
+    C1 --> D1[Return average_grade]
+    D1 --> E1[Print average_grade]
+    E1 --> F1[Call find_highest]
+    F1 --> G1[Return highest_grade]
+    G1 --> H1[Print highest_grade]
+    H1 --> I1[Call find_lowest]
+    I1 --> J1[Return lowest_grade]
+    J1 --> K1[Print lowest_grade]
+    K1 --> L1[End]
