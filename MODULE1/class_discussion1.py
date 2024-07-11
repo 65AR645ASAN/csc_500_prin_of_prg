@@ -13,7 +13,8 @@ class CookieBaking:
             'chocolate_chips': '1 cup'
         }
 
-    def preheat_oven(self, temp=350):
+    @staticmethod
+    def preheat_oven(temp=350):
         """
         Preheat the oven to a specified temperature.
 
@@ -52,7 +53,8 @@ class CookieBaking:
 
         return dough
 
-    def form_cookies(self, dough):
+    @staticmethod
+    def form_cookies(dough):
         """
         Form the cookie dough into individual cookies on a baking sheet.
 
@@ -61,7 +63,8 @@ class CookieBaking:
         """
         print("Forming cookies on the baking sheet...")
 
-    def bake_cookies(self, time=10):
+    @staticmethod
+    def bake_cookies(time=10):
         """
         Bake the cookies in the oven for a specified amount of time.
 
@@ -70,7 +73,8 @@ class CookieBaking:
         """
         print(f"Baking cookies for {time} minutes...")
 
-    def cool_and_serve(self):
+    @staticmethod
+    def cool_and_serve():
         """
         Cool the cookies on the baking sheet and then transfer them to wire racks to cool completely.
         """
