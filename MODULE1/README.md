@@ -1,26 +1,33 @@
-# Cookie Baking Algorithm
-
-The following flowchart describes the algorithm for baking cookies:
-
 ```mermaid
 graph TD
-    A[Start] --> B[Gather Ingredients]
-    B --> C[Preheat Oven to 350°F]
-    C --> D[Prepare Dough]
-    D --> E[Form Cookies on Baking Sheet]
-    E --> F[Bake for 8-10 minutes]
-    F --> G[Cool and Serve]
-    G --> H[End]
-
-    subgraph Prepare Dough
-        D1[Mix Dry Ingredients]
-        D2[Cream Butter and Sugar]
-        D3[Beat in Eggs and Vanilla]
-        D4[Blend in Dry Ingredients]
-        D5[Stir in Chocolate Chips]
-        D1 --> D2
-        D2 --> D3
-        D3 --> D4
-        D4 --> D5
-        D5 --> E
-    end
+    A[Start] --> B[Get number of batches]
+    B --> C{Batches?}
+    C -->|1| D1[Get 2 cups of flour]
+    C -->|2| D2[Get 4 cups of flour]
+    C -->|3| D3[Get 6 cups of flour]
+    D1 --> E1[Get 1/3 cup of sugar]
+    D2 --> E2[Get 2/3 cup of sugar]
+    D3 --> E3[Get 1 cup of sugar]
+    E1 --> F1[Get 1/5 cup of butter]
+    E2 --> F2[Get 2/5 cup of butter]
+    E3 --> F3[Get 3/5 cup of butter]
+    F1 --> G1[Get 1/4 Teaspoon baking powder]
+    F2 --> G2[Get 1/2 Teaspoon baking powder]
+    F3 --> G3[Get 3/4 Teaspoon baking powder]
+    G1 --> H1[Get 1 egg]
+    G2 --> H2[Get 2 eggs]
+    G3 --> H3[Get 3 eggs]
+    H1 --> I1[Get 2 Teaspoons of milk]
+    H2 --> I2[Get 4 Teaspoons of milk]
+    H3 --> I3[Get 6 Teaspoons of milk]
+    I1 --> J1[Mix Ingredients]
+    I2 --> J2[Mix Ingredients]
+    I3 --> J3[Mix Ingredients]
+    J1 --> K[Preheat oven to 350 degrees]
+    J2 --> K[Preheat oven to 350 degrees]
+    J3 --> K[Preheat oven to 350 degrees]
+    K --> L[Put Cookies on the Baking Sheet]
+    L --> M[Bake Cookies for 15 minutes]
+    M --> N[Cool Cookies]
+    N --> O[Serve]
+    O --> P[End]
