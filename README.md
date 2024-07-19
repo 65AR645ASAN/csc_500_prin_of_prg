@@ -15,6 +15,7 @@ The following files are open source and covered by the MIT License:
 
 - `MODULE1/critical-thinking-module-1-csc500-1.pdf`
 - `MODULE1/graphviz_algorithm.py`
+- `README.md`
 
 Other files in this repository are not open source and are proprietary.
 
