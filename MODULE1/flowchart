@@ -7,7 +7,7 @@ digraph {
 	F [label="Get 1/4 Teaspoon baking powder per batch"]
 	G [label="Get 1 egg per batch"]
 	H [label="Get 2 Teaspoons of milk per batch"]
-	I [label="More Batches?"]
+	I [label="More Batches? | Quality Check"]
 	J [label="Mix Ingredients"]
 	K [label="Preheat Oven to 350°F"]
 	L [label="Shape Cookies on Baking Sheet"]
