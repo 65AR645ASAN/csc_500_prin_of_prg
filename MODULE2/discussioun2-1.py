@@ -9,7 +9,7 @@ def check_age_and_permissions(age, has_permission):
         return "Access Denied"
 
 
-# Example usage:
+# Example usage - Function Calls:
 print(check_age_and_permissions(20, True))  # Output: Access Granted
 print(check_age_and_permissions(15, True))  # Output: Access Denied
 print(check_age_and_permissions(20, False))  # Output: Access Denied
