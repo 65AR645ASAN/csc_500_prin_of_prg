@@ -8,10 +8,12 @@ def check_age_and_permissions(age, has_permission):
     else:
         return "Access Denied"
 
+
 # Example usage:
-print(check_age_and_permissions(20, True))   # Output: Access Granted
-print(check_age_and_permissions(15, True))   # Output: Access Denied
+print(check_age_and_permissions(20, True))  # Output: Access Granted
+print(check_age_and_permissions(15, True))  # Output: Access Denied
 print(check_age_and_permissions(20, False))  # Output: Access Denied
+
 
 def find_first_true_value(values):
     """
@@ -23,9 +25,11 @@ def find_first_true_value(values):
             return value
     return None
 
+
 # Example usage:
 values = [0, False, None, '', 'First True Value', 'Another Value']
 print(find_first_true_value(values))  # Output: First True Value
+
 
 # Example with any() and all()
 def check_conditions(conditions):
@@ -38,9 +42,11 @@ def check_conditions(conditions):
         return "At least one condition is True"
     return "No conditions are True"
 
+
 # Example usage:
 conditions = [True, False, True]
 print(check_conditions(conditions))  # Output: At least one condition is True
+
 
 # Potential issues with complexity
 def complex_conditions_check(cond1, cond2, cond3, cond4):
@@ -51,6 +57,7 @@ def complex_conditions_check(cond1, cond2, cond3, cond4):
         return "Complex Condition Met"
     else:
         return "Complex Condition Not Met"
+
 
 # Example usage:
 print(complex_conditions_check(True, False, True, False))  # Output: Complex Condition Met
