@@ -75,3 +75,14 @@ However, it can lead to:
 
 It's essential to balance the use of short-circuiting with code readability and maintainability.
 """)
+
+
+print('''
+In this code:
+check_age_and_permissions: Demonstrates short-circuiting with the and operator to ensure both conditions are met 
+before granting access. find_first_true_value: Uses the or operator to find the first true value in a list, 
+stopping evaluation as soon as a true value is found. check_conditions: Utilizes the any() and all() functions, 
+which also support short-circuiting. complex_conditions_check: Shows how short-circuiting can lead to complex and 
+hard-to-maintain code. This script highlights the practical applications of short-circuiting, its benefits, 
+and the potential pitfalls to be aware of.
+''')
