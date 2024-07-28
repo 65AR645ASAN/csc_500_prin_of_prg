@@ -1,18 +1,20 @@
-def check_age_and_permissions(age, has_permission):
+def check_age_and_permissions(age, married):
     """
-    Check if the user is above 18 and has permission.
+    Check if the user is above 25 and is married.
     Demonstrates short-circuiting with the 'and' operator.
     """
-    if age >= 18 and has_permission:
-        return "Access Granted"
+    if age >= 25 and married:
+        return "Access Granted for Housing Loan"
     else:
-        return "Access Denied"
+        return "Access Denied for Housing Loan"
 
 
 # Example usage - Function Calls:
-print(check_age_and_permissions(20, True))  # Output: Access Granted
-print(check_age_and_permissions(15, True))  # Output: Access Denied
-print(check_age_and_permissions(20, False))  # Output: Access Denied
+print(check_age_and_permissions(20, True))  # Output: Access Denied
+
+print(check_age_and_permissions(30, False))  # Output: Access Denied
+
+print(check_age_and_permissions(30, True))  # Output: Access Granted
 
 
 def find_first_true_value(values):
@@ -75,7 +77,6 @@ However, it can lead to:
 
 It's essential to balance the use of short-circuiting with code readability and maintainability.
 """)
-
 
 print('''
 In this code:
