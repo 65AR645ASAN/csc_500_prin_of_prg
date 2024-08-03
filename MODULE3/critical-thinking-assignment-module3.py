@@ -1,4 +1,4 @@
-# Copy this line - Beggining of Program
+# Copy this line - Beginning of Program
 # PART 1
 def calculate_meal_total():
     """
