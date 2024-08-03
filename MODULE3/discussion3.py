@@ -24,3 +24,6 @@ class StudentGrades:
 grades = [85, 90, 78, 92, 88, 76, 95, 89, 84, 91]
 student_grades = StudentGrades(grades)
 student_grades.print_grades_info()
+
+
+
