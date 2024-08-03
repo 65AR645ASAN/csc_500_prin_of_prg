@@ -4,7 +4,7 @@ def calculate_meal_total():
     """
         Calculates the total amount of a meal with an 18% tip and 7% sales tax.
         """
-    charge_for_food = float(input("Enter the charge for the food: $"))
+    charge_for_food = float(input("food charge: $"))
     tip = charge_for_food * 0.18
     sales_tax = charge_for_food * 0.07
     total_amount = charge_for_food + tip + sales_tax
@@ -18,10 +18,10 @@ def calculate_meal_total():
 # PART 2
 def calculate_alarm_time():
     """
-    Calculates the time when an alarm will go off given the current time and a wait time in hours.
+    Calculates when an alarm will go off given the current time and a wait time in hours.
     """
-    current_time = int(input("Enter the current time (in 24-hour format): "))
-    hours_to_wait = int(input("Enter the number of hours to wait for the alarm: "))
+    current_time = int(input("Enter current time (in 24-hour format): "))
+    hours_to_wait = int(input("Enter number of hours to wait for the alarm: "))
     alarm_time = (current_time + hours_to_wait) % 24
     print(f"The alarm will go off at: {alarm_time:02d}:00")
 
