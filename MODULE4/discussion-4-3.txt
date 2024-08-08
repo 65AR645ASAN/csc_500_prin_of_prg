@@ -6,22 +6,22 @@ To create a loop, several key constructs are required:
 4. Body: The block of code that is executed in each iteration of the loop.
 
  Scenario 1: Using a While Loop
-Use Case: Continuously checking if a system service is running, and restarting it if it's not.
+Use Case: Continuously checking if a system service is running, and restarting it if its not.
 
 Details: This scenario requires a while loop because the number of iterations is unknown and depends on the dynamic condition of the system service status. The loop will keep checking the service status until it is running correctly.
 
 Pseudocode:
-```python
+
 service_running = False
 
 while not service_running:
     service_running = check_service_status()
     if not service_running:
         restart_service()
-    sleep(10)  # Wait for 10 seconds before checking again
+    sleep(10)   Wait for 10 seconds before checking again
 
 print("Service is now running.")
-```
+
 
  Scenario 2: Using a For Loop
 Use Case: Processing a fixed number of files in a directory and applying a specific operation to each file.
@@ -29,7 +29,7 @@ Use Case: Processing a fixed number of files in a directory and applying a speci
 Details: This scenario requires a for loop because the number of files is known, and we need to iterate through each file exactly once.
 
 Pseudocode:
-```python
+
 files = get_files_in_directory("data/")
 
 for file in files:
@@ -37,18 +37,144 @@ for file in files:
     print(f"Processed {file}")
 
 print("All files have been processed.")
-```
 
- Feedback on Peers' Scenarios
-Dylan's Post:
-Dylan effectively explains the differences between `while` and `for` loops with clear and practical examples. The pseudocode provided is straightforward and easy to follow. The scenarios chosen, such as checking for a homeowner and processing paper submissions, aptly illustrate the use cases for each loop type.
 
-Sadhana's Post:
-Sadhana provides a detailed explanation of the key constructs required for loops and differentiates between `for` and `while` loops very well. The pseudocode examples for counting digits in a number and counting vowels in a string are excellent illustrations of how each loop type can be used. Including the step-by-step explanation of each example enhances understanding.
+ Feedback on Peers Scenarios
+Dylans Post:
+Dylan effectively explains the differences between while and for loops with clear and practical examples. The pseudocode provided is straightforward and easy to follow. The scenarios chosen, such as checking for a homeowner and processing paper submissions, aptly illustrate the use cases for each loop type.
 
-Adam's Post:
-Adam's examples of loops in a game setting and robotics are insightful and highlight real-world applications of loops. The pseudocode for both scenarios is clear and demonstrates the use of `for` and `while` loops effectively. The explanation of the context in which each loop is used helps to understand the necessity of different loop types.
+Sadhanas Post:
+Sadhana provides a detailed explanation of the key constructs required for loops and differentiates between for and while loops very well. The pseudocode examples for counting digits in a number and counting vowels in a string are excellent illustrations of how each loop type can be used. Including the step-by-step explanation of each example enhances understanding.
+
+Adams Post:
+Adams examples of loops in a game setting and robotics are insightful and highlight real-world applications of loops. The pseudocode for both scenarios is clear and demonstrates the use of for and while loops effectively. The explanation of the context in which each loop is used helps to understand the necessity of different loop types.
 
  Summary
 - For Loop: Best for situations where the number of iterations is known and fixed, such as processing a specific number of data records.
 - While Loop: Best for situations where the number of iterations is unknown and depends on a condition that changes during execution, such as continuously checking the status of a system service.
+
+
+
+
+
+
+
+
+
+
+
+
+
+ COPY THIS LINE OF CODE - BEGINNING
+class ItemToPurchase:
+    def __init__(self, item_name="none", item_price=0, item_quantity=0):
+        self.item_name = item_name
+        self.item_price = item_price
+        self.item_quantity = item_quantity
+
+    def print_item_cost(self):
+        total_cost = self.item_price * self.item_quantity
+        print(f"{self.item_name} {self.item_quantity} @ ${self.item_price} = ${total_cost}")
+
+
+def main():
+    print("Item 1")
+    item1_name = input("Enter the item name:\n")
+    item1_price = float(input("Enter the item price:\n"))
+    item1_quantity = int(input("Enter the item quantity:\n"))
+    item1 = ItemToPurchase(item1_name, item1_price, item1_quantity)
+
+    print("\nItem 2")
+    item2_name = input("Enter the item name:\n")
+    item2_price = float(input("Enter the item price:\n"))
+    item2_quantity = int(input("Enter the item quantity:\n"))
+    item2 = ItemToPurchase(item2_name, item2_price, item2_quantity)
+
+    print("\nTOTAL COST")
+    item1.print_item_cost()
+    item2.print_item_cost()
+
+    total_cost = (item1.item_price * item1.item_quantity) + (item2.item_price * item2.item_quantity)
+    print(f"\nTotal: ${total_cost}")
+
+
+if __name__ == "__main__":
+    main()
+ COPY THIS LINE OF CODE - ENDING
+
+
+
+
+
+
+
+ Explanation of the Code
+
+This code defines a Python class named ItemToPurchase, which models an item that someone might want to purchase. The class has a constructor method (__init__) and a method to print the cost of the item (print_item_cost).
+
+ Class Definition: ItemToPurchase
+
+
+class ItemToPurchase:
+
+- This line defines a class named ItemToPurchase.
+- A class in Python is a blueprint for creating objects. Objects are instances of a class that have attributes (data) and methods (functions) associated with them.
+
+ Constructor Method: __init__
+
+
+def __init__(self, item_name="none", item_price=0, item_quantity=0):
+    self.item_name = item_name
+    self.item_price = item_price
+    self.item_quantity = item_quantity
+
+__init__: This is a special method in Python known as the constructor. It is automatically called when an instance (object) of the class is created.
+- Parameters:
+  - item_name: A string representing the name of the item. The default value is "none".
+  - item_price: A float representing the price of the item. The default value is 0.
+  - item_quantity: An integer representing the quantity of the item to be purchased. The default value is 0.
+self: This is a reference to the current instance of the class. It is used to access attributes and methods within the class.
+- Attributes:
+  - self.item_name: This sets the instances item_name attribute to the value passed in (or the default value if none is provided).
+  - self.item_price: This sets the instances item_price attribute to the value passed in (or the default value if none is provided).
+  - self.item_quantity: This sets the instances item_quantity attribute to the value passed in (or the default value if none is provided).
+
+ Method: print_item_cost
+
+
+def print_item_cost(self):
+    total_cost = self.item_price * self.item_quantity
+    print(f"{self.item_name} {self.item_quantity} @ ${self.item_price} = ${total_cost}")
+
+- Method Definition: This method is named print_item_cost, and it belongs to the ItemToPurchase class.
+self Parameter: Like in the constructor, self refers to the instance of the class. It allows the method to access the attributes of the instance.
+- Logic:
+  - Calculate Total Cost: The line total_cost = self.item_price * self.item_quantity calculates the total cost of the item by multiplying its price by its quantity.
+  - Print Statement: The print function outputs a formatted string that includes the items name, quantity, unit price, and the total cost. This is done using an f-string, which allows the inclusion of variable values inside a string by enclosing them in curly braces {}.
+
+ Example Usage
+
+Lets say we create an instance of ItemToPurchase:
+
+item = ItemToPurchase("Chocolate Chips", 3, 2)
+
+- This will create an object item with:
+  - item_name set to "Chocolate Chips"
+  - item_price set to 3
+  - item_quantity set to 2
+
+If we then call the method:
+
+item.print_item_cost()
+
+- The output will be:
+  
+  Chocolate Chips 2 @ $3 = $6
+  
+
+This method effectively allows the ItemToPurchase class to display the cost of an item in a clear and user-friendly format.
+
+
+The main function in this code snippet prompts the user to input details for two items, 
+creates instances of the ItemToPurchase class for these items, and then calculates and 
+prints the total cost. Here's a detailed breakdown of what each part of the function does
