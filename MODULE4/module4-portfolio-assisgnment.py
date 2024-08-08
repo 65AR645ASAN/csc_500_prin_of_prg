@@ -1,33 +1,33 @@
 # COPY THIS LINE OF CODE - BEGINNING
-class ItemToPurchase:
-    def __init__(self, item_name="none", item_price=0, item_quantity=0):
-        self.item_name = item_name
-        self.item_price = item_price
-        self.item_quantity = item_quantity
+class ItemToProcure:
+    def __init__(self, name_of_item="none", price_of_item=0, quantity_of_item=0):
+        self.name_of_item = name_of_item
+        self.price_of_item = price_of_item
+        self.quantity_of_item = quantity_of_item
 
-    def print_item_cost(self):
-        total_cost = self.item_price * self.item_quantity
-        print(f"{self.item_name} {self.item_quantity} @ ${self.item_price} = ${total_cost}")
+    def console_log_item_cost(self):
+        total_cost = self.price_of_item * self.quantity_of_item
+        print(f"{self.name_of_item} {self.quantity_of_item} @ ${self.price_of_item} = ${total_cost}")
 
 
 def main():
     print("Item 1")
-    item1_name = input("Enter the item name:\n")
-    item1_price = float(input("Enter the item price:\n"))
-    item1_quantity = int(input("Enter the item quantity:\n"))
-    item1 = ItemToPurchase(item1_name, item1_price, item1_quantity)
+    item1_name = input("Enter the name of item1:\n")
+    item1_price = float(input("Enter the price of item1:\n"))
+    item1_quantity = int(input("Enter the quantity of item1:\n"))
+    item1 = ItemToProcure(item1_name, item1_price, item1_quantity)
 
     print("\nItem 2")
-    item2_name = input("Enter the item name:\n")
-    item2_price = float(input("Enter the item price:\n"))
-    item2_quantity = int(input("Enter the item quantity:\n"))
-    item2 = ItemToPurchase(item2_name, item2_price, item2_quantity)
+    item2_name = input("Enter the name of item2:\n")
+    item2_price = float(input("Enter the price of item2:\n"))
+    item2_quantity = int(input("Enter the quantity of item2:\n"))
+    item2 = ItemToProcure(item2_name, item2_price, item2_quantity)
 
     print("\nTOTAL COST")
-    item1.print_item_cost()
-    item2.print_item_cost()
+    item1.console_log_item_cost()
+    item2.console_log_item_cost()
 
-    total_cost = (item1.item_price * item1.item_quantity) + (item2.item_price * item2.item_quantity)
+    total_cost = (item1.price_of_item * item1.quantity_of_item) + (item2.price_of_item * item2.quantity_of_item)
     print(f"\nTotal: ${total_cost}")
 
 
