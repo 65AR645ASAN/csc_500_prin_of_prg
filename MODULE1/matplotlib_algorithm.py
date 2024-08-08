@@ -29,10 +29,11 @@ steps = [
     ("Mix Ingredients", 0, 0),
     ("Preheat Oven to 350°F", 0, -2),
     ("Shape Cookies on Baking Sheet", 0, -4),
-    ("Bake for 10-12 Minutes", 0, -6),
-    ("Cool Cookies", 0, -8),
-    ("Serve and Enjoy", 0, -10),
-    ("End", 0, -12),
+    ("Add Toppings to cookies", 0, -6),
+    ("Bake for 10-12 Minutes", 0, -8),
+    ("Cool Cookies", 0, -10),
+    ("Serve and Enjoy", 0, -12),
+    ("End", 0, -14),
 ]
 
 # Draw the steps
