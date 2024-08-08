@@ -12,18 +12,18 @@ class ItemToProcure:
 
 def main():
     print("Item 1")
-    item1_name = input("Enter the name of item1:\n")
-    item1_price = float(input("Enter the price of item1:\n"))
-    item1_quantity = int(input("Enter the quantity of item1:\n"))
+    item1_name = input("Whats the name of item1:\n")
+    item1_price = float(input("Whats the price of item1:\n"))
+    item1_quantity = int(input("Whats the quantity of item1:\n"))
     item1 = ItemToProcure(item1_name, item1_price, item1_quantity)
 
     print("\nItem 2")
-    item2_name = input("Enter the name of item2:\n")
-    item2_price = float(input("Enter the price of item2:\n"))
-    item2_quantity = int(input("Enter the quantity of item2:\n"))
+    item2_name = input("Whats the name of item2:\n")
+    item2_price = float(input("Whats the price of item2:\n"))
+    item2_quantity = int(input("Whats the quantity of item2:\n"))
     item2 = ItemToProcure(item2_name, item2_price, item2_quantity)
 
-    print("\nTOTAL COST")
+    print("\nHERE IS THE TOTAL COST OF THE TWO ITEMS")
     item1.console_log_item_cost()
     item2.console_log_item_cost()
 
