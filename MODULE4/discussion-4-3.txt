@@ -53,57 +53,42 @@ Adams examples of loops in a game setting and robotics are insightful and highli
 - For Loop: Best for situations where the number of iterations is known and fixed, such as processing a specific number of data records.
 - While Loop: Best for situations where the number of iterations is unknown and depends on a condition that changes during execution, such as continuously checking the status of a system service.
 
+# COPY THIS LINE OF CODE - BEGINNING
+class ItemToProcure:
+    def __init__(self, product_name="none", dollar_value_of_item=0, numerical_quantity_of_product=0):
+        self.product_name = product_name
+        self.dollar_value_of_item = dollar_value_of_item
+        self.numerical_quantity_of_product = numerical_quantity_of_product
 
-
-
-
-
-
-
-
-
-
-
-
- COPY THIS LINE OF CODE - BEGINNING
-class ItemToPurchase:
-    def __init__(self, item_name="none", item_price=0, item_quantity=0):
-        self.item_name = item_name
-        self.item_price = item_price
-        self.item_quantity = item_quantity
-
-    def print_item_cost(self):
-        total_cost = self.item_price * self.item_quantity
-        print(f"{self.item_name} {self.item_quantity} @ ${self.item_price} = ${total_cost}")
+    def console_log_item_cost(self):
+        total_cost = self.dollar_value_of_item * self.numerical_quantity_of_product
+        print(f"{self.product_name} {self.numerical_quantity_of_product} @ ${self.dollar_value_of_item} = ${total_cost}")
 
 
 def main():
     print("Item 1")
-    item1_name = input("Enter the item name:\n")
-    item1_price = float(input("Enter the item price:\n"))
-    item1_quantity = int(input("Enter the item quantity:\n"))
-    item1 = ItemToPurchase(item1_name, item1_price, item1_quantity)
+    item1_name = input("Whats the name of item1:\n")
+    item1_dollar_value = float(input("Whats the dollar_value of item1:\n"))
+    item1_quantity = int(input("Whats the quantity of item1:\n"))
+    item1 = ItemToProcure(item1_name, item1_dollar_value, item1_quantity)
 
     print("\nItem 2")
-    item2_name = input("Enter the item name:\n")
-    item2_price = float(input("Enter the item price:\n"))
-    item2_quantity = int(input("Enter the item quantity:\n"))
-    item2 = ItemToPurchase(item2_name, item2_price, item2_quantity)
+    item2_name = input("Whats the name of item2:\n")
+    item2_dollar_value = float(input("Whats the dollar_value of item2:\n"))
+    item2_quantity = int(input("Whats the quantity of item2:\n"))
+    item2 = ItemToProcure(item2_name, item2_dollar_value, item2_quantity)
 
-    print("\nTOTAL COST")
-    item1.print_item_cost()
-    item2.print_item_cost()
+    print("\nHERE IS THE TOTAL COST OF THE TWO ITEMS")
+    item1.console_log_item_cost()
+    item2.console_log_item_cost()
 
-    total_cost = (item1.item_price * item1.item_quantity) + (item2.item_price * item2.item_quantity)
+    total_cost = (item1.dollar_value_of_item * item1.numerical_quantity_of_product) + (item2.dollar_value_of_item * item2.numerical_quantity_of_product)
     print(f"\nTotal: ${total_cost}")
 
 
 if __name__ == "__main__":
     main()
- COPY THIS LINE OF CODE - ENDING
-
-
-
+# COPY THIS LINE OF CODE - ENDING
 
 
 
@@ -178,3 +163,93 @@ This method effectively allows the ItemToPurchase class to display the cost of a
 The main function in this code snippet prompts the user to input details for two items, 
 creates instances of the ItemToPurchase class for these items, and then calculates and 
 prints the total cost. Here's a detailed breakdown of what each part of the function does
+
+
+
+
+
+
+
+
+
+
+
+ Explanation of the Output
+
+Let's break down the output step by step to understand what the program does and what each line of the output represents.
+
+ User Input Prompts and Responses
+
+The program starts by prompting the user for details of two items.
+
+1. **Item 1 Details
+   Prompt Enter the item name:
+   User Input Choclate Chips
+   Prompt Enter the item price:
+   User Input 3
+   Prompt Enter the item quantity:
+   User Input 1
+
+2. **Item 2 Details
+   Prompt Enter the item name:
+   User Input Bottled Water
+   Prompt Enter the item price:
+   User Input 1
+   Prompt Enter the item quantity:
+   User Input 10
+
+ Output Section
+
+After collecting the details for both items, the program prints the total cost for each item and then the combined total cost.
+
+1. **Total Cost for Each Item
+   First Item Choclate Chips 1 @ $3.0 = $3.0
+     - The item name is Choclate Chips.
+     - The quantity is 1.
+     - The price per item is $3.0.
+     - The total cost for this item is 1 * 3.0 = $3.0.
+   Second Item Bottled Water 10 @ $1.0 = $10.0
+     - The item name is Bottled Water.
+     - The quantity is 10.
+     - The price per item is $1.0.
+     - The total cost for this item is 10 * 1.0 = $10.0.
+
+2. **Combined Total Cost
+   Total Total: $13.0
+     - The combined total cost of both items is $3.0 + $10.0 = $13.0.
+
+ Final Output:
+
+Item 1
+Enter the item name:
+Choclate Chips
+Enter the item price:
+3
+Enter the item quantity:
+1
+
+Item 2
+Enter the item name:
+Bottled Water
+Enter the item price:
+1
+Enter the item quantity:
+10
+
+TOTAL COST
+Choclate Chips 1 @ $3.0 = $3.0
+Bottled Water 10 @ $1.0 = $10.0
+
+Total: $13.0
+
+Process finished with exit code 0
+
+
+Process finished with exit code 0 This line indicates that the program ran successfully without any errors. The exit code 0 is a standard way to signal that the program completed successfully.
+
+ Summary
+
+- The program collects the name, price, and quantity for two items from the user.
+- It then calculates and prints the total cost for each item.
+- Finally, it calculates and prints the combined total cost of both items.
+- The program ends successfully, as indicated by the exit code 0.
