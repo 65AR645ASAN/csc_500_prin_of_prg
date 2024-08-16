@@ -1,0 +1,24 @@
+In Python, the 'and' and 'or' operators are logical operators used to 
+combine multiple conditions or expressions.
+
+ 'and' Operator:
+- The 'and' operator returns 'True' if both of the conditions are true.
+- It evaluates from left to right and stops as soon as it encounters a condition that is 'False' (short-circuiting).
+
+- Example:
+  x = 5
+  y = 10
+  result = (x > 2) and (y < 15)   True, because both conditions are true
+
+
+ 'or' Operator:
+- The 'or' operator returns 'True' if at least one of the conditions is true.
+- It evaluates from left to right and stops as soon as it encounters a condition that is 'True' (short-circuiting).
+- Example:
+
+  x = 5
+  y = 10
+  result = (x > 2) or (y > 15)   True, because the first condition is true
+
+
+Both operators are commonly used in conditional statements and loops to control the flow of the program based on multiple conditions.

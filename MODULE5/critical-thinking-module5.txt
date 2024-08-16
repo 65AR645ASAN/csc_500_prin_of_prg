@@ -1,0 +1,108 @@
+ Copy this line - Beginning of Program
+
+ Part 1: Mean Rainfall Calculation
+
+years = int(input("Years to Break Up into Months: "))
+
+cumulative_rainfall_in_inches_ = 0
+cumulative_months = 0
+
+for year in range(1, years + 1):
+    print(f"Year >>> {year}:")
+
+    for month in range(1, 13):
+        rainfall = float(input(f"Inches of Rain per month >>> {month}: "))
+
+        cumulative_rainfall_in_inches_ += rainfall
+
+    cumulative_months += 12
+
+ Calculate the Mean rainfall
+Mean_rainfall = cumulative_rainfall_in_inches_ / cumulative_months
+
+print(f"\nCumulative Number of months: {cumulative_months}")
+print(f"Cumulative inches of rainfall: {cumulative_rainfall_in_inches_:.2f}")
+print(f"Mean rainfall per month: {Mean_rainfall:.2f} inches")
+
+ Part 2: Bookstore Points Calculation
+
+number_of_books_procured = int(input("How Many Books are Procured This Month: "))
+
+if number_of_books_procured == 0:
+    numeral_of_points_earned = 0
+elif number_of_books_procured == 2:
+    numeral_of_points_earned = 5
+elif number_of_books_procured == 4:
+    numeral_of_points_earned = 15
+elif number_of_books_procured == 6:
+    numeral_of_points_earned = 30
+elif number_of_books_procured >= 8:
+    numeral_of_points_earned = 60
+else:
+    numeral_of_points_earned = 0
+
+print(f"Total Amount of Points Awarded: {numeral_of_points_earned}")
+ Copy this line - End of Program
+
+
+
+
+
+ APA Style Title:
+
+"Average Rainfall Calculation: A Python Program Utilizing Nested Loops for Data Collection and Analysis"
+
+Explanation of the Code:
+
+This Python program is designed to calculate the average rainfall over a specified period, with data collection occurring on a monthly basis across multiple years. The program operates in the following steps:
+
+1. User Input for Years: The program begins by asking the user to input the number of years over which rainfall data will be collected. This input defines the number of iterations for the outer loop.
+
+2. Initialization of Variables:
+   - 'cumulative_rainfall_in_inches_': This variable is initialized to store the total rainfall collected over the entire period.
+   - 'cumulative_months': This variable is initialized to store the total number of months across all years.
+
+3. Nested Loops:
+   - Outer Loop (Yearly Iteration): The outer loop runs once for each year specified by the user. In each iteration of the outer loop, the program prints the current year number.
+   - Inner Loop (Monthly Iteration): Within each year, the inner loop iterates 12 times, corresponding to the 12 months in a year. For each iteration (representing a month), the program prompts the user to input the inches of rainfall for that month. This value is then added to the cumulative rainfall total.
+   
+4. Calculation of Cumulative Months: After each year, the program adds 12 to the 'cumulative_months' variable, accounting for all the months of that year.
+
+5. Calculation of Mean Rainfall: After the loops have completed, the program calculates the mean rainfall per month by dividing the total rainfall by the total number of months ('Mean_rainfall = cumulative_rainfall_in_inches_ / cumulative_months').
+
+6. Display of Results: The program then outputs the total number of months, the cumulative rainfall in inches, and the average rainfall per month, all formatted to two decimal places.
+
+ Screen Output Interpretation:
+
+- The first screenshot shows the code implementation in a Python environment, highlighting the nested loop structure and the arithmetic operations performed to calculate the cumulative and average rainfall.
+- The second screenshot displays the program's execution in a terminal, showing the user input of rainfall data for each month, and the resulting cumulative and average rainfall outputs.
+
+This program effectively demonstrates the use of nested loops in Python for collecting data over multiple periods and performing a simple arithmetic analysis on the collected data.
+
+ Labels for Screenshots 3 and 4:
+
+- Screenshot 3: "Bookstore Points Calculation Code"
+  - This screenshot shows the Python code for calculating the number of points awarded based on the number of books purchased. The code uses conditional statements to check the number of books procured and assigns points accordingly.
+
+- Screenshot 4: "Bookstore Points Calculation Output"
+  - This screenshot displays the output of the Python program when the user inputs the number of books purchased as 7. The output shows the prompt asking the user for the number of books and the resulting points awarded.
+
+ Explanation:
+
+Screenshot 3 presents the code that calculates the number of points awarded by a bookstore based on the number of books purchased in a month. The code works as follows:
+
+1. User Input: The program first prompts the user to enter the number of books procured in the current month using the label "How Many Books are Procured This Month:".
+
+2. Conditional Logic:
+   - The code checks the number of books using a series of 'if', 'elif', and 'else' statements.
+   - Depending on the number of books procured, the code assigns a specific number of points ('numeral_of_points_earned'). For example:
+     - 0 books -> 0 points
+     - 2 books -> 5 points
+     - 4 books -> 15 points
+     - 6 books -> 30 points
+     - 8 or more books -> 60 points
+   - If the number of books does not match any of the specified conditions, the program defaults to 0 points.
+
+3. Output: Finally, the program prints the total number of points awarded using the label "Total Amount of Points Awarded: {numeral_of_points_earned}".
+
+Screenshot 4 displays the result of running the program with the input "7" for the number of books procured. The program mistakenly awarded 0 points instead of the expected number of points. This indicates a potential logic issue in the program, specifically in the conditional statement that should have awarded 30 points for 7 books. The condition for awarding 30 points ('number_of_books_procured == 6') did not account for 7 books, leading to the final 'else' clause, which assigns 0 points.
