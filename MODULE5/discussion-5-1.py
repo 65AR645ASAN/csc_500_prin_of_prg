@@ -91,3 +91,39 @@ def is_positive_and_even(number):
 # Test the 'and' example
 number = 4
 print(f"Number: {number} -> {is_positive_and_even(number)}")
+
+
+def proceed_to_security_check():
+    print("Proceed to security check.")
+
+
+def go_back_to_counter():
+    print("Go back to the counter.")
+
+
+def scan_boarding_pass():
+    print("Scan the boarding pass.")
+
+
+def check_identification(valid_identification, valid_boarding_pass, identification_type, is_real_id=False):
+    # First check using AND operator
+    if valid_identification and valid_boarding_pass:
+        proceed_to_security_check()
+    else:
+        go_back_to_counter()
+        return
+
+    # Second check using OR operator
+    if identification_type == 'passport' or (identification_type == 'govt_issued_id' and is_real_id):
+        scan_boarding_pass()
+    else:
+        go_back_to_counter()
+
+
+# Example usage
+valid_identification = True
+valid_boarding_pass = True
+identification_type = 'govt_issued_id'
+is_real_id = True
+
+check_identification(valid_identification, valid_boarding_pass, identification_type, is_real_id)
