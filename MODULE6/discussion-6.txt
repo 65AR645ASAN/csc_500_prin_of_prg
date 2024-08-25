@@ -161,3 +161,12 @@ Choosing Between Lists and Dictionaries:
 
 Conclusion:
 Lists and dictionaries are powerful tools in Python, each serving specific needs. Lists are ideal for ordered collections and sequential data operations, while dictionaries provide efficient key-based data management. The choice between the two depends on whether order or quick access is more critical to your application.
+
+
+W3Schools. (n.d.). Python Conditions. Retrieved August 25, 2024, from https://www.w3schools.com/python/python_conditions.asp
+Python Software Foundation. (n.d.). The Python Tutorial: More Control Flow Tools. Retrieved August 25, 2024, from https://docs.python.org/3/tutorial/controlflow.html
+W3Schools. (n.d.). Python Classes and Objects. Retrieved August 25, 2024, from https://www.w3schools.com/python/python_classes.asp
+Python Software Foundation. (n.d.). The Python Tutorial: Classes. Retrieved August 25, 2024, from https://docs.python.org/3/tutorial/classes.html
+GeeksforGeeks. (n.d.). Python Functions. Retrieved August 25, 2024, from https://www.geeksforgeeks.org/python-functions/
+Reddit. (n.d.). Pass class as argument to another class. Retrieved August 25, 2024, from https://www.reddit.com/r/learnpython/comments/12fk1we/pass_class_as_argument_to_another_class/
+Sikka, S. (2024, January 24). Python Type Hinting: How To Get Started and Why You Should Use It. Dagster. Retrieved August 25, 2024, from https://dagster.io/blog/python-type-hinting
