@@ -6,79 +6,79 @@ class ItemToProcure:
         self.numerical_quantity_of_product = numerical_quantity_of_product
 
     def console_log_product_cost(self):
-        total_cost = self.dollar_value_of_product * self.numerical_quantity_of_product
-        print(f"{self.product_name} {self.numerical_quantity_of_product} @ ${self.dollar_value_of_product} = ${total_cost}")
+        total_cost_of_cart = self.dollar_value_of_product * self.numerical_quantity_of_product
+        print(f"{self.product_name} {self.numerical_quantity_of_product} @ ${self.dollar_value_of_product} = ${total_cost_of_cart}")
 
 
-def initial_item_to_cart(cart):
+def initial_product_to_cart(cart):
     print("Whats the details of the first item:")
-    item_name = input("Whats the description of the item:\n")
-    item_dollar_value = float(input(f"Whats the dollar value of the {item_name}:\n"))
-    item_quantity = int(input(f"Whats the quantity of the {item_name}:\n"))
-    item = ItemToProcure(item_name, item_dollar_value, item_quantity)
+    product_name = input("Whats the description of the item:\n")
+    product_dollar_value = float(input(f"Whats the dollar value of the {product_name}:\n"))
+    product_quantity = int(input(f"Whats the quantity of the {product_name}:\n"))
+    item = ItemToProcure(product_name, product_dollar_value, product_quantity)
     cart.add_product(item)
 
     print("\nHERE IS THE TOTAL COST OF THE ITEM")
     item.console_log_product_cost()
 
-    total_cost = cart.get_cost_of_cart()
-    print(f"\nTotal: ${total_cost}")
+    total_cost_of_cart = cart.get_cost_of_cart()
+    print(f"\nTotal: ${total_cost_of_cart}")
 
 
 class ShoppingCart:
     def __init__(self, grocery_shoppers_name="none", todays_shopping_date="January 1, 2020"):
         self.grocery_shoppers_name = grocery_shoppers_name
         self.todays_shopping_date = todays_shopping_date
-        self.cart_items = []
+        self.items_in_shopping_cart = []
 
     def add_product(self, item: ItemToProcure):
-        self.cart_items.append(item)
+        self.items_in_shopping_cart.append(item)
 
     def remove_product(self, product_name: str):
         found = False
-        for item in self.cart_items:
+        for item in self.items_in_shopping_cart:
             if item.product_name == product_name:
-                self.cart_items.remove(item)
+                self.items_in_shopping_cart.remove(item)
                 found = True
                 break
         if not found:
             print("The Item to be Removed, wasn't found in the cart, So nothing was REMOVED.")
 
-    def adjust_item(self, item_to_modify: ItemToProcure):
+    def adjust_item(self, product_to_modify: ItemToProcure):
         found = False
-        for item in self.cart_items:
-            if item.product_name == item_to_modify.product_name:
-                if item_to_modify.dollar_value_of_product != 0:
-                    item.dollar_value_of_product = item_to_modify.dollar_value_of_product
-                if item_to_modify.numerical_quantity_of_product != 0:
-                    item.numerical_quantity_of_product = item_to_modify.numerical_quantity_of_product
+        for item in self.items_in_shopping_cart:
+            if item.product_name == product_to_modify.product_name:
+                if product_to_modify.dollar_value_of_product != 0:
+                    item.dollar_value_of_product = product_to_modify.dollar_value_of_product
+                if product_to_modify.numerical_quantity_of_product != 0:
+                    item.numerical_quantity_of_product = product_to_modify.numerical_quantity_of_product
                 found = True
                 break
         if not found:
             print("The Item to be Modified, wasn't found in the cart, So nothing was MODIFIED.")
 
     def get_num_items_in_cart(self) -> int:
-        total_quantity = sum(item.numerical_quantity_of_product for item in self.cart_items)
+        total_quantity = sum(item.numerical_quantity_of_product for item in self.items_in_shopping_cart)
         return total_quantity
 
     def get_cost_of_cart(self) -> float:
-        total_cost = sum(item.dollar_value_of_product * item.numerical_quantity_of_product for item in self.cart_items)
-        return total_cost
+        total_cost_of_cart = sum(item.dollar_value_of_product * item.numerical_quantity_of_product for item in self.items_in_shopping_cart)
+        return total_cost_of_cart
 
     def print_total(self):
         print(f"{self.grocery_shoppers_name}'s Shopping Cart - {self.todays_shopping_date}")
-        if not self.cart_items:
+        if not self.items_in_shopping_cart:
             print("THERE IS NOTHING IN THE SHOPPING CART, IT IS EMPTY!")
         else:
             print(f"Total Number of Items in the Shopping Cart: {self.get_num_items_in_cart()}")
-            for item in self.cart_items:
+            for item in self.items_in_shopping_cart:
                 item.console_log_product_cost()
             print(f"\nTotal Cost of the Cart: ${self.get_cost_of_cart()}")
 
     def print_descriptions(self):
         print(f"{self.grocery_shoppers_name}'s Shopping Cart - {self.todays_shopping_date}")
         print("Item Descriptions")
-        for item in self.cart_items:
+        for item in self.items_in_shopping_cart:
             print(f"{item.product_name}: {item.dollar_value_of_product}")
 
 
@@ -122,7 +122,7 @@ def main():
     grocery_shoppers_name = input("What's the Grocery Shoppers Name:\n")
     todays_shopping_date = input("What's the Date of the Grocery Shopping [Format ex: Aug 20, 2024]:\n")
     cart = ShoppingCart(grocery_shoppers_name, todays_shopping_date)
-    initial_item_to_cart(cart)  # Only one item is initially added
+    initial_product_to_cart(cart)  # Only one item is initially added
     print_menu(cart)  # Proceed with the menu
 
 
