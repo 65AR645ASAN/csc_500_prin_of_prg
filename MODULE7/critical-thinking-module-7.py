@@ -1,6 +1,6 @@
 # COPY THIS LINE OF CODE - BEGINNING
 def main():
-    university_instruction_rooms = {
+    university_instruction_rm = {
         'CSC101': '3004',
         'CSC102': '4501',
         'CSC103': '6755',
@@ -26,13 +26,13 @@ def main():
 
     subject_number = input("Enter a subject number (e.g., NET110): ")
 
-    if subject_number in university_instruction_rooms:
-        print(f"Course Number: {subject_number}")
-        print(f"Room Number: {university_instruction_rooms[subject_number]}")
+    if subject_number in university_instruction_rm:
+        print(f"subject Number: {subject_number}")
+        print(f"Room Number: {university_instruction_rm[subject_number]}")
         print(f"Instructor: {professors[subject_number]}")
-        print(f"Meeting Time: {instruction_time_slots[subject_number]}")
+        print(f"Instruction Time Slot: {instruction_time_slots[subject_number]}")
     else:
-        print("Sorry, the course number entered does not exist.")
+        print("Sorry, the subject number entered does not exist.")
 
 
 if __name__ == "__main__":
