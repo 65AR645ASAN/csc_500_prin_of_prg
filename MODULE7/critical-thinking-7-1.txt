@@ -1,0 +1,63 @@
+
+ Explanation of the Program
+
+The provided Python program is designed to manage and display information about university courses, including the room numbers where the courses are held, the instructors teaching them, and their meeting times. The program utilizes dictionaries to store and efficiently retrieve this information based on user input.
+
+Key Concepts in the Program:
+
+1.Dictionaries in Python:
+Dictionaries are a data structure in Python that store data as key-value pairs. In this program, dictionaries are used to map course numbers (keys) to their corresponding details like room numbers, instructors, and meeting times (values).
+Three dictionaries are created:
+university_instruction_rooms: Maps course numbers to the room numbers where each course is conducted.
+professors: Maps course numbers to the names of the instructors teaching each course.
+instruction_time_slots: Maps course numbers to the times when each course is scheduled.
+
+2.User Input and Lookup:
+The program begins by prompting the user to enter a course number. This input is stored in the variable subject_number.
+The program then checks whether the entered course number exists in the university_instruction_rooms dictionary. This is achieved using the in keyword, which checks for the presence of a key in a dictionary.
+
+3.Displaying Course Information:
+If the entered course number is found in the university_instruction_rooms dictionary, the program proceeds to retrieve and display the relevant information from all three dictionaries:
+     Room Number: Retrieved from university_instruction_rooms using the entered course number as the key.
+     Instructor: Retrieved from the professors dictionary.
+     Meeting Time: Retrieved from the instruction_time_slots dictionary.
+The use of formatted strings (f"...") allows the program to seamlessly insert variable values into output messages, making the output more readable and informative.
+
+4.Handling Invalid Input:
+If the user enters a course number that does not exist in the university_instruction_rooms dictionary, the program displays a message indicating that the entered course number does not exist. This provides a simple form of error handling, ensuring that the program responds gracefully to invalid input.
+
+5.Modular Structure and main() Function:
+The program is organized into a main() function, which is a common practice in Python programming to encapsulate the main logic of the script. This makes the code easier to read and maintain.
+The if __name__ == "__main__": statement at the end of the script ensures that the main() function is only executed when the script is run directly, not when it is imported as a module in another script. This is a standard Python idiom that enhances the reusability of the code.
+
+Program Behavior and Output:
+
+When the user runs the program, they are prompted to enter a course number, such as "COM241".
+The program checks if "COM241" exists in the university_instruction_rooms dictionary. Finding that it does, the program retrieves the room number, instructor, and meeting time from the respective dictionaries.
+The output displays the details for "COM241" in a clear and formatted manner:
+
+  Course Number: COM241
+  Room Number: 1411
+  Instructor: Lee
+  Meeting Time: 1:00 p.m.
+
+If a user enters a non-existent course number, like "MATH101", the program outputs:
+
+  Sorry, the course number entered does not exist.
+
+
+Benefits of Using Dictionaries:
+
+Efficiency: Dictionaries provide fast lookups, insertions, and deletions, making them ideal for scenarios where quick access to data is required based on a unique identifier (course number).
+Flexibility: Dictionaries can store diverse types of information, such as strings for room numbers and instructors or complex data types if needed.
+Ease of Maintenance: Adding or updating course information is straightforward; one needs only to modify the relevant dictionary entries.
+
+Overall, this program demonstrates the effective use of dictionaries to manage and retrieve structured data, providing a user-friendly interface for querying university course information.
+
+Python Software Foundation. (n.d.). Built-in functions. In Python 3.12.0 documentation. Retrieved August 26, 2024, from https://docs.python.org/3/library/functions.html
+
+LearnPython.com. (n.d.). If-else Python practice problems. Retrieved August 26, 2024, from https://learnpython.com/blog/if-else-python-practice-problems/
+
+Tutorialsteacher.com. (n.d.). Python if...elif...else statement. Retrieved August 26, 2024, from https://www.tutorialsteacher.com/python/python-if-elif
+
+Programiz. (n.d.). Python if...elif...else statement. Retrieved August 26, 2024, from https://www.programiz.com/python-programming/if-elif-else
