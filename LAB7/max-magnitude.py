@@ -3,15 +3,22 @@ Write a function max_magnitude() with two integer input parameters that returns 
 Use the function in a program that takes two integer inputs, and outputs the largest magnitude value.
 """
 
-one_input, two_input = input().split()
 
-
-def max_magnitude():
-    if one_input > two_input:
-        print(one_input)
+def max_magnitude(user_val1, user_val2):
+    """Returns the integer with the largest magnitude (absolute value)"""
+    if abs(user_val1) > abs(user_val2):
+        return user_val1
     else:
-        print(two_input)
+        return user_val2
 
 
 if __name__ == "__main__":
-    max_magnitude()
+    # Read inputs
+    user_val1 = int(input())
+    user_val2 = int(input())
+
+    # Get the number with the largest magnitude
+    result = max_magnitude(user_val1, user_val2)
+
+    # Output the result
+    print(result)
