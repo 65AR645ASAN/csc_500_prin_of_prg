@@ -1,6 +1,7 @@
+    }
 # COPY THIS LINE OF CODE - BEGINNING
 def main():
-    room_numbers = {
+    university_instruction_rooms = {
         'CSC101': '3004',
         'CSC102': '4501',
         'CSC103': '6755',
@@ -8,7 +9,7 @@ def main():
         'COM241': '1411'
     }
 
-    instructors = {
+    professors = {
         'CSC101': 'Haynes',
         'CSC102': 'Alvarado',
         'CSC103': 'Rich',
@@ -16,7 +17,7 @@ def main():
         'COM241': 'Lee'
     }
 
-    meeting_times = {
+    instruction_time_slots = {
         'CSC101': '8:00 a.m.',
         'CSC102': '9:00 a.m.',
         'CSC103': '10:00 a.m.',
@@ -24,14 +25,13 @@ def main():
         'COM241': '1:00 p.m.'
     }
 
-    
-    course_number = input("Enter a course number (e.g., CSC101): ")
-    
-    if course_number in room_numbers:
-        print(f"Course Number: {course_number}")
-        print(f"Room Number: {room_numbers[course_number]}")
-        print(f"Instructor: {instructors[course_number]}")
-        print(f"Meeting Time: {meeting_times[course_number]}")
+    subject_number = input("Enter a subject number (e.g., NET110): ")
+
+    if subject_number in university_instruction_rooms:
+        print(f"Course Number: {subject_number}")
+        print(f"Room Number: {university_instruction_rooms[subject_number]}")
+        print(f"Instructor: {professors[subject_number]}")
+        print(f"Meeting Time: {instruction_time_slots[subject_number]}")
     else:
         print("Sorry, the course number entered does not exist.")
 
