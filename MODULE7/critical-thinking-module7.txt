@@ -1,4 +1,3 @@
-    }
 # COPY THIS LINE OF CODE - BEGINNING
 def main():
     university_instruction_rooms = {
