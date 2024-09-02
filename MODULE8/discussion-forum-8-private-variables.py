@@ -1,5 +1,6 @@
 class CoffeeShopItem:
     def __init__(self, name, price):
+        self.__name = None
         self.__name = name          # Private attribute
         self.__price = price        # Private attribute
 
