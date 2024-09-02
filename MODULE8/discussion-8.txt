@@ -1,0 +1,104 @@
+This Python code defines a class named `CoffeeShopItem` and demonstrates how to use it to create instances representing various items in a coffee shop, such as Frappuccino, Coffee, Creme Brulee Iced Coffee, Banana Cake, Muffin, and Yogurt. The class is designed to encapsulate the attributes of each item (its name and price) as private variables, providing methods to access and modify these attributes safely.
+
+ Breakdown of the Code
+
+ 1. Class Definition: `CoffeeShopItem`
+
+
+class CoffeeShopItem:
+    def __init__(self, name, price):
+        self.__name = name           Private attribute
+        self.__price = price         Private attribute
+
+
+`__init__` Method: This is the constructor method that initializes an instance of the `CoffeeShopItem` class. It takes two parameters, `name` and `price`, which represent the name and price of the coffee shop item, respectively.
+Private Attributes: The attributes `__name` and `__price` are prefixed with double underscores (`__`), making them private. This means they are not directly accessible from outside the class, promoting encapsulation.
+
+ 2. Methods to Display, Access, and Modify Attributes
+
+
+    def display_info(self):
+        print(f"Item: {self.__name}, Price: ${self.__price:.2f}")
+
+
+`display_info` Method: This method prints out the item's name and price in a formatted string. It accesses the private attributes `__name` and `__price` to display them.
+
+
+    def get_name(self):
+        return self.__name
+
+    def set_name(self, name):
+        self.__name = name
+
+
+`get_name` Method: This getter method returns the private attribute `__name`. It provides controlled access to the private variable.
+`set_name` Method: This setter method allows modifying the private attribute `__name`. It provides controlled modification of the private variable.
+
+
+    def get_price(self):
+        return self.__price
+
+    def set_price(self, price):
+        if price >= 0:   Ensuring the price is non-negative
+            self.__price = price
+        else:
+            print("Invalid price")
+
+
+`get_price` Method: This getter method returns the private attribute `__price`.
+`set_price` Method: This setter method allows modifying the private attribute `__price`. It includes a validation check to ensure that the price is non-negative. If an invalid price (negative value) is provided, it prints an error message instead of setting the value.
+
+ 3. Creating Instances of `CoffeeShopItem`
+
+
+frappuccino = CoffeeShopItem("Frappuccino", 4.50)
+coffee = CoffeeShopItem("Coffee", 2.00)
+creme_brulee_iced_coffee = CoffeeShopItem("Creme Brulee Iced Coffee", 5.75)
+banana_cake = CoffeeShopItem("Banana Cake", 3.25)
+muffin = CoffeeShopItem("Muffin", 2.75)
+yogurt = CoffeeShopItem("Yogurt", 1.50)
+
+
+Instances Creation: These lines create six instances of the `CoffeeShopItem` class, each representing a different item in the coffee shop with a specified name and price.
+
+ 4. Attempting to Access Private Attributes Directly
+
+
+try:
+    print(frappuccino.__name)
+except AttributeError as e:
+    print(e)   Output: 'CoffeeShopItem' object has no attribute '__name'
+
+
+Direct Access Attempt: This code block attempts to directly access the private attribute `__name` of the `frappuccino` instance. Since `__name` is a private attribute, Python raises an `AttributeError`, which is caught and printed.
+
+ 5. Accessing and Modifying Attributes via Getter and Setter Methods
+
+
+print(frappuccino.get_name())   Output: Frappuccino
+
+
+Using `get_name`: This line calls the `get_name` method to access the private `__name` attribute. It prints "Frappuccino", demonstrating how to access a private variable through a method.
+
+
+frappuccino.set_price(4.75)
+print(frappuccino.get_price())   Output: 4.75
+
+
+Using `set_price` and `get_price`: These lines demonstrate modifying the private attribute `__price` using the `set_price` method and then retrieving it using the `get_price` method. The new price of 4.75 is set and confirmed by the output.
+
+ 6. Displaying Information for All Items
+
+
+coffee.display_info()                  Output: Item: Coffee, Price: $2.00
+creme_brulee_iced_coffee.display_info()   Output: Item: Creme Brulee Iced Coffee, Price: $5.75
+banana_cake.display_info()             Output: Item: Banana Cake, Price: $3.25
+muffin.display_info()                  Output: Item: Muffin, Price: $2.75
+yogurt.display_info()                  Output: Item: Yogurt, Price: $1.50
+
+
+Displaying Item Information: These lines call the `display_info` method for each instance to print out their name and price, demonstrating how the method can be used to output the details of different coffee shop items.
+
+ Summary
+
+The code illustrates the use of private attributes in Python classes to encapsulate data, ensuring that it is not directly accessible from outside the class. It uses getter and setter methods to provide controlled access to these private attributes, thereby enforcing data integrity and security. The example also showcases object-oriented programming principles such as encapsulation, data hiding, and method definition.
