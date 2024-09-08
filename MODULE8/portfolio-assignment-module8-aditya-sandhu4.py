@@ -57,7 +57,7 @@ class GroceryCartAtStore:
         if not found:
             print("The Object to be Modified, wasn't found in the cart, So nothing was MODIFIED.")
 
-    def get_num_Objects_in_cart(self) -> int:
+    def get_num_objects_in_cart(self) -> int:
         total_quantity = sum(Object.numerical_quantity_of_product for Object in self.products_in_shopping_cart)
         return total_quantity
 
@@ -71,7 +71,7 @@ class GroceryCartAtStore:
         if not self.products_in_shopping_cart:
             print("THERE IS NOTHING IN THE Grocery Cart, IT IS EMPTY!")
         else:
-            print(f"Total Number of Objects in the Grocery Cart: {self.get_num_Objects_in_cart()}")
+            print(f"Total Number of objects in the Grocery Cart: {self.get_num_objects_in_cart()}")
             for Object in self.products_in_shopping_cart:
                 Object.console_log_product_cost()
             print(f"\nTotal Cost of the Cart: ${self.get_cost_of_cart()}")
@@ -89,7 +89,7 @@ def print_menu(cart: GroceryCartAtStore):
     ADD - Add Object to cart
     REMOVE - Remove Object from cart
     MODIFY - Modify Object quantity
-    IDENTIFY - Output Objects' identity
+    IDENTIFY - Output objects' identity
     OUTPUT - Output Grocery Cart
     QUIT - Quit
     """
