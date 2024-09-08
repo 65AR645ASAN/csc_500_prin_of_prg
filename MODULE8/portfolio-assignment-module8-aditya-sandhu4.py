@@ -134,6 +134,7 @@ def main():
 
     cart = GroceryCartAtStore(grocery_shoppers_name, todays_shopping_date)
     initial_product_to_cart(cart)
+
     print_menu(cart)
 
 
